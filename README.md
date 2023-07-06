@@ -1,4 +1,4 @@
-# Run Streamlit on Codespaces
+# Run Streamlit on Codespace and have fun!
 
 Fork this repo, add your Streamlit app to it, and run it on GitHub Codespaces. :balloon:
 
