@@ -4,7 +4,7 @@ import pickle
 import streamlit as st
 import streamlit_authenticator as st_auth
 
-
+st.set_page_config("AutoReport")
 user = ["John Doe", "Jane Doe"]
 usernames = ["jd94", "princess_doe"] 
 
@@ -20,5 +20,7 @@ match authentication_status :
     case None:
         st.warning("Please enter your username and password")
     case True:
-        #file uploader goes here
+        st.title("AutoReport")
+        st.subheader("Let's start to report!")
+        up_file = st.file_uploader("Upload file", type="txt")
         authenticator.logout("Logout", "sidebar")
