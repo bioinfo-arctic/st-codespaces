@@ -22,7 +22,7 @@ match authentication_status :
     case True:
         st.title("AutoReport")
         st.subheader("Let's start to report!")
-        up_file = st.file_uploader("Upload file", type="txt")
+        up_file = st.file_uploader("Upload file", accept_multiple_files= True, help = "Upload fastq and metadata files")
         process = subprocess.call("bash.sh", args)
 
         authenticator.logout("Logout", "sidebar")
