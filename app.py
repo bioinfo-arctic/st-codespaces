@@ -1,6 +1,6 @@
 from pathlib import Path
+import subprocess
 import pickle
-
 import streamlit as st
 import streamlit_authenticator as st_auth
 
@@ -23,4 +23,6 @@ match authentication_status :
         st.title("AutoReport")
         st.subheader("Let's start to report!")
         up_file = st.file_uploader("Upload file", type="txt")
+        process = subprocess.call("bash.sh", args)
+
         authenticator.logout("Logout", "sidebar")
