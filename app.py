@@ -25,5 +25,10 @@ match authentication_status :
         up_file = st.file_uploader("Upload file", accept_multiple_files= True, help = "Upload all your necessary files")
         if up_file is not None:
             ##process = subprocess.call("./test.sh", up_file)
-            st.text(up_file.name)
+            with open("temp_file", "wb") as f:
+                f.write(up_file.getvalue())
+                # Execute o script Bash com o arquivo como argumento
+                result = subprocess.run(["./test.sh", "temp_file"], capture_output=True, text=True)
+                # Exiba a saída do script
+                st.write(result.stdout)
         authenticator.logout("Logout", "sidebar")
