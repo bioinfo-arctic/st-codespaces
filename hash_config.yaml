@@ -6,14 +6,14 @@ credentials:
   usernames:
     jd94:
       email: johndoe@gmail.com
-      hashed_password: $2b$12$YfWzKsY0HCiEQvZWQamM6.vFz0ld1pDqMJwSNMsg/ZYctRa5mq3J2
       name: John Doe
-      password: qwert1234!@#$
+      password:
+      - $2b$12$kDq8PkYUIDT1cAMDwblkEeZbknxzwmSnBJjx6IwwvH86r3CApE8AK
     princess_doe:
       email: jj@gmail.com
-      hashed_password: $2b$12$C3OdwamYkX11j5CCOtA4y.nMYHcWktMWE5Lz8X5ghdlUePU5sfJHy
       name: Jane Doe
-      password: abc987/*-
+      password:
+      - $2b$12$kQUzqlkxo0Ve8i4eSLyFdeK6578iTTuEpFpEhXD2HLR74ztrqcfQ.
 preauthorized:
   emails:
   - autoreport@gmail.com
