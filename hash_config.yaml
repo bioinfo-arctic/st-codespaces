@@ -1,0 +1,19 @@
+cookie:
+  expiry_days: 10
+  key: some_signature_key
+  name: auto_report
+credentials:
+  usernames:
+    jd94:
+      email: johndoe@gmail.com
+      hashed_password: $2b$12$YfWzKsY0HCiEQvZWQamM6.vFz0ld1pDqMJwSNMsg/ZYctRa5mq3J2
+      name: John Doe
+      password: qwert1234!@#$
+    princess_doe:
+      email: jj@gmail.com
+      hashed_password: $2b$12$C3OdwamYkX11j5CCOtA4y.nMYHcWktMWE5Lz8X5ghdlUePU5sfJHy
+      name: Jane Doe
+      password: abc987/*-
+preauthorized:
+  emails:
+  - autoreport@gmail.com

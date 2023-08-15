@@ -1,0 +1,17 @@
+credentials:
+  usernames:
+    jd94:
+      email: johndoe@gmail.com
+      name: John Doe
+      password: qwert1234!@#$
+    princess_doe:
+      email: jj@gmail.com
+      name: Jane Doe
+      password: abc987/*-
+cookie:
+  expiry_days: 10
+  key: some_signature_key # Must be string
+  name: auto_report
+preauthorized:
+  emails:
+  - autoreport@gmail.com
