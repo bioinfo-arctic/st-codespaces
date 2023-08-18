@@ -1,14 +1,14 @@
-from pathlib import Path
-import pickle
-
+import yaml
+from yaml.loader import SafeLoader
 import streamlit as st
 import streamlit_authenticator as st_auth
 
-user = ["John Doe", "Jane Doe"]
-usernames = ["jd94", "princess_doe"] 
-passwords  =["qwert1234!@#$", "abc987/*-"]
-hashed_passwords = st_auth.Hasher(passwords).generate()
+with open('./config.yaml') as file:
+    config = yaml.load(file, Loader=SafeLoader)
+    for i in config['credentials']['usernames']:
+        for j in config['credentials']['usernames'][i]:
+            if j == 'password':
+                config['credentials']['usernames'][i]['password'] = st_auth.Hasher([config['credentials']['usernames'][i][j]]).generate()
 
-file_path = Path(__file__).parent / "hs_pw.pkl"
-with file_path.open("wb") as file:
-    pickle.dump(hashed_passwords, file)
+with open('./hash_config.yaml', 'w') as dump_file:
+    yaml.dump(config, dump_file)
