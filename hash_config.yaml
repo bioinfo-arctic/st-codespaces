@@ -5,15 +5,17 @@ cookie:
 credentials:
   usernames:
     jd94:
+      credits: 1
       email: johndoe@gmail.com
       name: John Doe
       password:
-      - $2b$12$kDq8PkYUIDT1cAMDwblkEeZbknxzwmSnBJjx6IwwvH86r3CApE8AK
+      - $2b$12$Vu99tNhg1Zk3QlRzgshCPuHIE0HYCND/9f9c56xYTna8P9FOYmNty
     princess_doe:
+      credits: 0
       email: jj@gmail.com
       name: Jane Doe
       password:
-      - $2b$12$kQUzqlkxo0Ve8i4eSLyFdeK6578iTTuEpFpEhXD2HLR74ztrqcfQ.
+      - $2b$12$tt1dwKaqQL3qyuGxoBTnh.F/HCJmCl4Dqoa8dGSJ9Tkg9jydpymhm
 preauthorized:
   emails:
   - autoreport@gmail.com
