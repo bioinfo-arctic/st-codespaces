@@ -3,10 +3,12 @@ credentials:
     jd94:
       email: johndoe@gmail.com
       name: John Doe
+      credits: 1
       password: qwert1234!@#$
     princess_doe:
       email: jj@gmail.com
       name: Jane Doe
+      credits: 0
       password: abc987/*-
 cookie:
   expiry_days: 10
