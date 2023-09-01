@@ -28,7 +28,8 @@ if authentication_status:
             for file in up_file:
                 st.write(type(file))
                 st.write(dir(file))
-                #process = subprocess.call("./test.sh", up_file)
+                process = subprocess.Popen(f"sh ./test.sh {username}/temp/{file}", stdstdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True )
+                print(process.stdout, process.stderr)
                 #with open("temp_file", "wb") as f:
                 #    f.write(up_file)
                     # Execute o script Bash com o arquivo como argumento
