@@ -1,0 +1,1 @@
+perl -0777 -i -pe 's/\s*-//g' hash_config.yaml 

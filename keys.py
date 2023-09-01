@@ -1,7 +1,7 @@
 import yaml
 from yaml.loader import SafeLoader
-import streamlit as st
 import streamlit_authenticator as st_auth
+import subprocess
 
 with open('./config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
@@ -12,3 +12,4 @@ with open('./config.yaml') as file:
 
 with open('./hash_config.yaml', 'w') as dump_file:
     yaml.dump(config, dump_file)
+subprocess.call(['sh ./correct.sh'], shell=True)
